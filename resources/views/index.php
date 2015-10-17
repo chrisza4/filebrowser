@@ -19,11 +19,13 @@
           </div>
            ${name}
         </div>
-        <div class="date col-md-2">
+        <div class="file-info">
+        <div class="date">
            ${date}
         </div>
-        <div class="size col-md-2">
+        <div class="size">
            ${size}
+        </div>
         </div>
       </div>
 </script>
@@ -36,11 +38,13 @@
           </div>
            ${name}
         </div>
-        <div class="date col-md-2">
+        <div class="file-info">
+        <div class="date ">
            ${date}
         </div>
-        <div class="size col-md-2">
+        <div class="size ">
            ${size}
+        </div>
         </div>
       </div>
 </script>

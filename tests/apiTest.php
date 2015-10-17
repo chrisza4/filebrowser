@@ -88,19 +88,25 @@ class apiTest extends TestCase
     }
     public function test_api_should_return_atleast_all_created_file_in_folder_1()
     {
-    	$response = $this->call('GET', '/browse', array('folder' => 'folder_1'))->getContent();
+    	$response = $this->call('GET', '/browse', array('folder' => '\\folder_1'))->getContent();
     	$responseObject = json_decode($response);
-    	//var_dump($this->sub1Content);
     	foreach ($this->sub1Content as $key => $value) {
     		$this->assertTrue($this->isExistsInFilesList($responseObject, $value));
     	}
     }
     public function test_api_should_return_atleast_all_created_file_in_folder_1_folder_1()
     {
-    	$response = $this->call('GET', '/browse', array('folder' => 'folder_1\\folder_1'))->getContent();
+    	$response = $this->call('GET', '/browse', array('folder' => '\\folder_1\\folder_1'))->getContent();
     	$responseObject = json_decode($response);
     	foreach ($this->sub2Content as $key => $value) {
     		$this->assertTrue($this->isExistsInFilesList($responseObject, $value));
     	}
+    }
+    public function test_file_size_as_string_correctly() {
+    	$toTest = new ApiController();
+    	$res = $toTest->fileSizeString(1);
+    	$this->assertEquals($res, "1 B");
+    	$res = $toTest->fileSizeString(35577499);
+    	$this->assertEquals($res, "33.93 MB");
     }
 }
