@@ -62,4 +62,10 @@ class ApiController extends Controller
     	//return response(json_encode($result))->->header('Content-Type', "application/J");
         return response()->json($result);
     }
+
+    public function download(Request $request) {
+        $rootFolder = trim(Config::get('app.BROWSE_URL'), "\\") . "\\";
+        $filePath = $rootFolder . trim($request->input('file'), "\\");
+        return response()->download($filePath);
+    }
 }

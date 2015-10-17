@@ -13,3 +13,4 @@
 
 Route::get('/', 'IndexController@index');
 Route::get('/browse', 'ApiController@browse');
+Route::get('/download', 'ApiController@download');

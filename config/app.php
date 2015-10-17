@@ -195,6 +195,6 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
 
     ],
-    'BROWSE_URL' => 'C:\\testing',
+    'BROWSE_URL' => 'D:\\Temp\\Sign',
 
 ];

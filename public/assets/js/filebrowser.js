@@ -28,7 +28,7 @@ $(document).ready(function() {
 					divToInsert = $.tmpl($('#templateFolder'), data);
 				}
 				else {
-					data.folder = folder;
+					data.folder = folder + data.name;
 					divToInsert = $.tmpl($('#templateFile'), data);
 				}
 				divToInsert.css('padding-left', currentLevel * eachPadding);
@@ -57,6 +57,9 @@ $(document).ready(function() {
 				}
 				$(this).removeClass('file-expand').addClass('file-collapse');
 			}
+		}
+		else {
+			window.open(baseUrl + '/download?file=' + thisRow.attr('data-folder'));
 		}
 	});
 });
