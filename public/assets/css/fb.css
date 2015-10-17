@@ -1,0 +1,70 @@
+li.row {
+
+}
+li.row-file {
+
+}
+div.row-browse:nth-child(odd)  {
+	background-color: #f3f6fa;
+}
+li.row-browse > div {
+	padding-left: 30px;
+	cursor: pointer;
+}
+div.file-row {
+	background-image: url('../file.png');
+	background-repeat: no-repeat;
+	background-position: 40px;
+}
+div.file-info {
+	float:right;
+	width:400px;
+}
+div.file-info div {
+	display: inline-block;
+	padding: 0px;
+}
+div.date {
+	width:250px;
+}
+div.size {
+	width:130px;
+}
+div.row-browse {
+	cursor: pointer;
+}
+div.folder-row {
+	background-image: url('../folder.png');
+	background-repeat: no-repeat;
+	background-position: 40px;	
+}
+div.icon {
+	display:inline-block;
+	width:22px;
+	height: 17px;
+	background-repeat: no-repeat;
+}
+.icon.icon-file {
+	background-image: url('../file.png');
+}
+.icon.icon-folder {
+	background-image: url('../folder.png');	
+}
+.file-expand .icon.arrow {
+	background-image: url('../arrow-down.png');		
+}
+.file-collapse .icon.arrow {
+	background-image: url('../arrow-right.png');		
+}
+ul {
+	list-style-type: none;
+}
+div.file {
+	width: 60%;
+}
+div.file-row {
+
+}
+ul#main {
+	padding:0px;
+}

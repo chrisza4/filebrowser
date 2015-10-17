@@ -7,6 +7,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Config;
 
 class ApiController extends Controller
@@ -33,6 +34,7 @@ class ApiController extends Controller
     		$thisEntity = array('name' => $file, 'type' => $fileType);
     		array_push($result, $thisEntity);
     	}
-    	return json_encode($result);
+    	//return response(json_encode($result))->->header('Content-Type', "application/J");
+        return response()->json($result);
     }
 }

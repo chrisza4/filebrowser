@@ -11,5 +11,5 @@
 |
 */
 
-Route::get('/1234', 'ApiController@browse');
+Route::get('/', 'IndexController@index');
 Route::get('/browse', 'ApiController@browse');
