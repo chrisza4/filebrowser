@@ -51,10 +51,13 @@ div.icon {
 	background-image: url('../folder.png');	
 }
 .file-expand .icon.arrow {
-	background-image: url('../arrow-down.png');		
+	background-image: url('../arrow-down-nobg.png');		
 }
 .file-collapse .icon.arrow {
-	background-image: url('../arrow-right.png');		
+	background-image: url('../arrow-right-nobg.png');		
+}
+div.loading .icon.arrow {
+	background-image: url('../ajax-loader.gif');
 }
 ul {
 	list-style-type: none;
