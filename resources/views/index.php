@@ -8,6 +8,7 @@
   <script>
      var baseUrl = "<?php echo url('/')?>";
   </script>
+  <title>Welcome to ChrisZa File browsing</title>
 </head>
 <body>
   <script type="text/html" id="templateFile">

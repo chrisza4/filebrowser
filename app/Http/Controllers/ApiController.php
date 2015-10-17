@@ -51,7 +51,7 @@ class ApiController extends Controller
     		if (is_dir($fullPath)) {
     			$fileType = ApiController::TYPE_FOLDER;
     		}
-            $modifiedTime = filectime($fullPath);
+            $modifiedTime = filectime(iconv('UTF-8', 'ISO-8859-1', $fullPath));
             $fileSizeStr = $fileType == ApiController::TYPE_FILE ? $this->fileSizeString(filesize($fullPath)) : "--";
     		$thisEntity = array('name' => $file, 
                 'type' => $fileType,
