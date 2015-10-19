@@ -35,7 +35,7 @@ class ApiController extends Controller
 
     public function browse(Request $request) {
     	$folder = $request->input('folder');
-    	if (is_null($folder)) {
+    	if (is_null($folder) || (strpos($folder, "\\..") === false) || $folder = "..") {
     		$folder = "";
     	}
         $folder = trim($folder, "\\") . "\\";
